@@ -1,4 +1,4 @@
-import { Clock } from "../modules/Clocks";
+import { Clock } from "../modules/Clocks"
 
 
 // Clocks: Takes clocks prop. 
@@ -10,7 +10,7 @@ export function Clocks(props: {clocks: Clock[ ], } ){
     return(
 
         <div>
-
+            <input></input>
 
         </div>
     )
