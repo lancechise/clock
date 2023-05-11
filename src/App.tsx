@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Header } from './components/header';
-import { Settings } from './components/Settings';
-import { Clocks } from './components/Clocks';
+import { Header } from './components/Header/Header';
+import { Settings } from './components/Settings/Settings';
+import { Clocks } from './components/Clocks/Clocks';
 
 function App() {
+  const 
   return (
     <div className="App">
       <Header />
