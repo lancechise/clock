@@ -1,4 +1,5 @@
 import { Clock } from "../../models/Clocks"
+import { ClockDisplay } from "../ClockDisplay/ClockDisplay"
 
 
 // Clocks: Takes clocks prop. 
@@ -7,12 +8,15 @@ import { Clock } from "../../models/Clocks"
 export function Clocks(props: {clocks: Clock[ ], } ){
 
 
+
+
     return(
 
         <div>
-
+        <ClockDisplay />
         </div>
     )
 
 
 }
+
