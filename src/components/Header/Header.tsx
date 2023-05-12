@@ -3,7 +3,6 @@ export function Header() {
         
         <div>
             <h1>Clock App</h1>
-            <button>Add Clock</button>
             <div>
             </div>
 
