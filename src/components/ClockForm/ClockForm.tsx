@@ -43,7 +43,7 @@ export function ClockForm( ) {
             <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
             <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
             <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
-            <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+            <option value="+08:00">(GMT +8:00) Beijing, Pertgit h, Singapore, Hong Kong</option>
             <option value="+08:75">(GMT +8:45) Eucla</option>
             <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
             <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
@@ -56,6 +56,13 @@ export function ClockForm( ) {
             <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
             <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
                     </select>
+                   
+                   <div>
+                    <label>
+                    <input type="checkbox" />
+                    Switch to digital clock?
+                    </label>
+                   </div>
             </form>
         </div>
     )

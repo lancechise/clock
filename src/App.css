@@ -1,0 +1,30 @@
+
+
+.container {
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+
+  .container-settings {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 1rem 1rem;
+    height: 50%;
+    margin-bottom: 
+  }
+  
+
+  
+  .container-clocks {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 50px;
+  }
+  
+
+  
+
+
