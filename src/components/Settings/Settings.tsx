@@ -9,6 +9,7 @@ export function Settings (props: {clocks: Clock[], updateClocks: (clocks: Clock[
 
 return ( 
     <div>
+        <ClockForm />
     </div>
     )
 }
