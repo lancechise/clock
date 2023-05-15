@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { ClockForm } from './components/ClockForm/ClockForm';
 import { Header } from './components/Header/Header';
 import AnalogClock from 'analog-clock-react';
+import { Clock } from './models/Clocks';
 
 
 function App( ) {
+
+  const [clocks, setClocks] = useState<Clock[]>([
+    //dummy clocks
+    {
+      timeZone: "-06:00",
+      isDigital: true
+    },
+    {
+      timeZone: "-07:00",
+      isDigital: false
+    }
+  ]);
+
+  //console.log(clocks)
+  
+
+  
 
   let options = {
     width: "200px",
