@@ -8,7 +8,11 @@ import AnalogClock from 'analog-clock-react';
 import { Clock } from './models/Clocks';
 =======
 import { useState } from 'react';
+<<<<<<< HEAD
 >>>>>>> d7949eca7fe9f635533da7b6f278c1ffef30937a
+=======
+import { ClockDisplay } from './components/ClockDisplay/ClockDisplay';
+>>>>>>> 4f713240cccd6fd8bd26497c3f3f2793e05cfbd1
 
 
 function App( ) {
@@ -67,7 +71,9 @@ function App( ) {
         <div className="container-clocks">
         <AnalogClock {...options}/>
         </ div>
-
+      <div className='clock-display'>
+        <ClockDisplay />
+      </div>
       </div>
 
     </div>
