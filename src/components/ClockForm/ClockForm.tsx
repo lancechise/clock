@@ -1,7 +1,218 @@
+import { useState } from "react";
 import { Clock } from "../../models/Clocks";
 import "./ClockForm.css";
 
 export function ClockForm( ) {
+
+   
+    const [timeZones, setTimeZones] = useState([
+        {
+        id: 1,
+        timeZone: "Eniwetok, Kwajalein",
+        isDigital: false
+        },
+        {
+        id: 2,
+        timeZone: "Midway Island, Samoa",
+        isDigital: false
+        },
+        {
+        id: 3,
+        timeZone: "Hawaii",
+        isDigital: false
+        },
+        {
+        id: 4,
+        timeZone: "Taiohae",
+        isDigital: false
+        },
+        {
+        id: 5,
+        timeZone: "Alaska",
+        isDigital: false
+        },
+        {
+        id: 6,
+        timeZone: "Pacific Time",
+        isDigital: false
+        },
+        {
+        id: 7,
+        timeZone: "Mountain Time",
+        isDigital: false
+        },
+        {
+        id: 8,
+        timeZone: "Central Time",
+        isDigital: false
+        },
+        {
+        id: 9,
+        timeZone: "Eastern Time",
+        isDigital: false
+        },
+        {
+        id: 10,
+        timeZone: "Caracas",
+        isDigital: false
+        },
+        {
+        id: 11,
+        timeZone: "Atlantic Time",
+        isDigital: false
+        },
+        {
+        id: 12,
+        timeZone: "Newfoundland",
+        isDigital: false
+        },
+        {
+        id: 13,
+        timeZone: "Brazil, Buenos Aires, Georgetown",
+        isDigital: false
+        },
+        {
+        id: 14,
+        timeZone: "Mid-Atlantic",
+        isDigital: false
+        },
+        {
+        id: 15,
+        timeZone: "Azores, Cape Verde Islands",
+        isDigital: false
+        },
+        {
+        id: 16,
+        timeZone: "Western Europe Time, London",
+        isDigital: false
+        },
+        {
+        id: 17,
+        timeZone: "Brussels, Copenhagen, Madrid, Paris",
+        isDigital: false
+        },
+        {
+        id: 18,
+        timeZone: "Kaliningrad, South Africa",
+        isDigital: false
+        },
+        {
+        id: 19,
+        timeZone: "Baghdad, Riyadh, Moscow, St. Petersburg",
+        isDigital: false
+        },
+        {
+        id: 20,
+        timeZone: "Tehran",
+        isDigital: false
+        },
+        {
+        id: 21,
+        timeZone: "Abu Dhabi, Muscat, Baku, Tbilisi",
+        isDigital: false
+        },
+        {
+        id: 22,
+        timeZone: "Kabul",
+        isDigital: false
+        },
+        {
+        id: 23,
+        timeZone: "Ekaterinburg, Islamabad, Karachi, Tashkent",
+        isDigital: false
+        },
+        {
+        id: 24,
+        timeZone: "Bombay, Calcutta, Madras, New Delhi",
+        isDigital: false
+        },
+        {
+        id: 25,
+        timeZone: "Katmandu, Pokhara",
+        isDigital: false
+        },
+        {
+        id: 26,
+        timeZone: "Almaty, Dhaka, Colombo",
+        isDigital: false
+        },
+        {
+        id: 27,
+        timeZone: "Yangon, Mandalay",
+        isDigital: false
+        },
+        {
+        id: 28,
+        timeZone: "Bangkok, Hanoi, Jakarta",
+        isDigital: false
+        },
+        {
+        id: 29,
+        timeZone: "Beijing, Pertgit h, Singapore, Hong Kong",
+        isDigital: false
+        },
+        {
+        id: 30,
+        timeZone: "Eucla",
+        isDigital: false
+        },
+        {
+        id: 31,
+        timeZone: "Tokyo, Seoul, Osaka, Sapporo, Yakutsk",
+        isDigital: false
+        },
+        {
+        id: 32,
+        timeZone: "Adelaide, Darwin",
+        isDigital: false
+        },
+        {
+        id: 33,
+        timeZone: "Eastern Australia, Guam, Vladivostok",
+        isDigital: false
+        },
+        {
+        id: 34,
+        timeZone: "Lord Howe Island",
+        isDigital: false
+        },
+        {
+        id: 35,
+        timeZone: "Magadan, Solomon Islands, New Caledonia",
+        isDigital: false
+        },
+        {
+        id: 36,
+        timeZone: "Norfolk Island",
+        isDigital: false
+        },
+        {
+        id: 37,
+        timeZone: "Auckland, Wellington, Fiji, Kamchatka",
+        isDigital: false
+        },
+        {
+        id: 38,
+        timeZone: "Chatham Islands",
+        isDigital: false
+        },
+        {
+        id: 39,
+        timeZone: "Apia, Nukualofa",
+        isDigital: false
+        },
+        {
+        id: 40,
+        timeZone: "Line Islands, Tokelau",
+        isDigital: false
+        },
+
+    ]);
+
+
+
+
+
     return (
 
 
@@ -14,7 +225,7 @@ export function ClockForm( ) {
 
 
             <label>Choose a TimeZone: </label>  
-            <select name="time-zones" id="time-zones">
+            <select name="time-zones" id="time-zones" value="selectTimeZone" onChange={handleTimeZoneChange}>
             <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
 	        <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
 	        <option value="-10:00">(GMT -10:00) Hawaii</option>
