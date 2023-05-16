@@ -5,6 +5,9 @@
     margin: 0 auto;
     padding: 2rem 2rem;
     text-align: center;
+
+
+    
   }
 
 
@@ -13,7 +16,8 @@
     border: 1px solid red;
     padding: 1rem 1rem;
     height: 50%;
-    margin-bottom: 
+    top: 50%;
+    left: 50%;
   }
   
 
@@ -26,5 +30,18 @@
   
 
   
+/* MEDIA QUERY ALIGNS SETTINGS ABOVE ANALOG/DIGITAL CLOCK */
 
+  @media only screen and (min-width: 768px){
+
+    .container{
+        
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    align-content: space-around;
+    gap: 100px;
+    }
+
+  }
 

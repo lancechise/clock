@@ -21,6 +21,14 @@ export function ClockDisplay(props: {}) {
       <button>Delete</button>
     </div>
   </div>;
+
+  return (
+    <div>
+      <div>
+        <button>Delete</button>
+      </div>
+    </div>
+  );
 }
 export default Clock;
 
