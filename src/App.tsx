@@ -5,6 +5,7 @@ import { ClockForm } from './components/ClockForm/ClockForm';
 import { Header } from './components/Header/Header';
 import AnalogClock from 'analog-clock-react';
 import { useState } from 'react';
+import { ClockDisplay } from './components/ClockDisplay/ClockDisplay';
 
 
 function App( ) {
@@ -43,7 +44,9 @@ function App( ) {
         <div className="container-clocks">
         <AnalogClock {...options}/>
         </ div>
-
+      <div className='clock-display'>
+        <ClockDisplay />
+      </div>
       </div>
 
     </div>
