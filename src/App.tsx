@@ -10,7 +10,7 @@ import { Clocks } from './components/Clocks/Clocks';
 import { Settings } from './components/Settings/Settings';
 
 
-function App( ) {
+function App() {
 
   const [clocks, setClocks] = useState<Clock[]>([
     //dummy clocks
@@ -29,7 +29,7 @@ function App( ) {
   return (
     <div>
       <Header />
-      <Settings updateClock={newClock => setClocks([...clocks, newClock])} clocks={[]}></Settings>
+      {/* <Settings updateClock={newClock => setClocks([...clocks, newClock])} clocks={[]}></Settings> */}
       <Clocks updateClock={() => {}} clocks={clocks}></Clocks>
     </div>
   )

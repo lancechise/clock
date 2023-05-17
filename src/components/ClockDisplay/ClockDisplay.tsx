@@ -5,9 +5,8 @@ import AnalogClock from 'analog-clock-react'
 export function ClockDisplay(props: {clock: Clock}) {
 
   const [date, setDate] = useState(new Date());
-  const gmt = props.clock.timeZone;
-  
-  let options = {
+  const [options, setOptions] = useState({
+    useCustomTime: true,
     width: "300px",
     border: true,
     borderColor: "#2e2e2e",
@@ -18,11 +17,39 @@ export function ClockDisplay(props: {clock: Clock}) {
       second: "#d81c7a",
       minute: "#ffffff",
       hour: "#ffffff"
-    }
-  };
-
+    },
+    seconds: date.getSeconds(),
+    minutes: date.getMinutes(),
+    hours: date.getHours(),
+  })
+  const gmt = props.clock.timeZone;
+  let ausTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
+  console.log(ausTime);
+  // console.log(date);
+  
   function refreshClock() {
-    setDate(new Date());
+   let timeZone = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
+
+   let newDate = new Date(timeZone);
+   
+   
+    setOptions({
+      useCustomTime: true,
+      width: "300px",
+      border: true,
+      borderColor: "#2e2e2e",
+      baseColor: "#17a2b8",
+      centerColor: "#459cff",
+      centerBorderColor: "#ffffff",
+      handColors: {
+        second: "#d81c7a",
+        minute: "#ffffff",
+        hour: "#ffffff"
+      },
+      seconds:  newDate.getSeconds(),
+      minutes: newDate.getMinutes(),
+      hours: newDate.getHours(),
+    });
   }
   
   useEffect(() => {
