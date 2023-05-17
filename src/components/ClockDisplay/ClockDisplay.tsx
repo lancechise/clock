@@ -1,74 +1,46 @@
 import { useState, useEffect } from "react";
 import { Clock } from "../../models/Clocks";
-const [date, setDate] = useState(new Date());
+import AnalogClock from 'analog-clock-react'
 
-<<<<<<< HEAD
-export function ClockDisplay(props: {}) {
-  function ClockDisplay() {
+export function ClockDisplay(props: {clock: Clock}) {
+
+  const [date, setDate] = useState(new Date());
+  const gmt = props.clock.timeZone;
+  
+  let options = {
+    width: "300px",
+    border: true,
+    borderColor: "#2e2e2e",
+    baseColor: "#17a2b8",
+    centerColor: "#459cff",
+    centerBorderColor: "#ffffff",
+    handColors: {
+      second: "#d81c7a",
+      minute: "#ffffff",
+      hour: "#ffffff"
+    }
+  };
+
+  function refreshClock() {
     setDate(new Date());
   }
+  
   useEffect(() => {
-    const timerId = setInterval(ClockDisplay, 1000);
+    const timerId = setInterval(refreshClock, 1000);
     return function cleanup() {
       clearInterval(timerId);
     };
   }, []);
-
-  return;
-  <div>
-    <span>{date.toLocaleTimeString()}</span>
-
-    <div>
-      <button>Delete</button>
-    </div>
-  </div>;
-
+   
   return (
-    <div>
       <div>
-        <button>Delete</button>
+        <div className="digital">
+          {date.toLocaleTimeString()}
+        </div>
+        <div className="analog">
+    <h2>React Clock</h2>
+    <AnalogClock {...options} />
+        </div>
       </div>
-    </div>
-  );
-}
-export default Clock;
-
-// import { useState, useEffect } from 'react';function Clock(){
-//     const [date, setDate] = useState(new Date());
-
-//     function refreshClock() {
-//       setDate(new Date());
-//     }  useEffect(() => {
-//       const timerId = setInterval(refreshClock, 1000);
-//       return function cleanup() {
-//         clearInterval(timerId);
-//       };
-//     }, []);  return (
-//       <span>
-//         {date.toLocaleTimeString()}
-//       </span>
-//     );
-//   }export default Clock;
-=======
-export function ClockDisplay(){
-    const [date, setDate] = useState(new Date());
-    
-    function refreshClock() {
-      setDate(new Date());
-    }  useEffect(() => {
-      const timerId = setInterval(refreshClock, 1000);
-      return function cleanup() {
-        clearInterval(timerId);
-      };
-    }, []);  return (
-        <div>
-            <div>
-                <button>Delete</button>
-            </div>
-        <span>
-            {date.toLocaleTimeString()}
-        </span>
-      </div>
-    );
+    )
   }
->>>>>>> 4f713240cccd6fd8bd26497c3f3f2793e05cfbd1

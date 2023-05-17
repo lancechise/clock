@@ -1,23 +1,15 @@
-import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { ClockForm } from './components/ClockForm/ClockForm';
 import { Header } from './components/Header/Header';
 import AnalogClock from 'analog-clock-react';
-<<<<<<< HEAD
 import { Clock } from './models/Clocks';
-=======
 import { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> d7949eca7fe9f635533da7b6f278c1ffef30937a
-=======
 import { ClockDisplay } from './components/ClockDisplay/ClockDisplay';
->>>>>>> 4f713240cccd6fd8bd26497c3f3f2793e05cfbd1
 
 
 function App( ) {
 
-<<<<<<< HEAD
   const [clocks, setClocks] = useState<Clock[]>([
     //dummy clocks
     {
@@ -35,9 +27,6 @@ function App( ) {
 
   
 
-=======
-  // Options for AnalogClock
->>>>>>> d7949eca7fe9f635533da7b6f278c1ffef30937a
   let options = {
     width: "200px",
     border: true,
