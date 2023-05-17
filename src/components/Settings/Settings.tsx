@@ -5,7 +5,7 @@ import { ClockForm } from "../ClockForm/ClockForm"
 // Given an array of clocks, displays a list of ClockForm components.
 
 
-export function Settings (props: {clocks: Clock[ ], updateClocks: (clocks: Clock[ ]) => void }){
+export function Settings (props: {clocks: Clock[ ], updateClock: (clocks: Clock) => void }){
 
 
 
