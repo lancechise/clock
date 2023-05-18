@@ -15,11 +15,11 @@ function App() {
   const [clocks, setClocks] = useState<Clock[]>([
     //dummy clocks
     {
-      timeZone: "-06:00",
+      timeZone: "Pacific/Efate",
       isDigital: true
     },
     {
-      timeZone: "-07:00",
+      timeZone: "America/Phoenix",
       isDigital: false
     }
   ]);

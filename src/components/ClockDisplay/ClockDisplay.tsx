@@ -23,12 +23,13 @@ export function ClockDisplay(props: {clock: Clock}) {
     hours: date.getHours(),
   })
   const gmt = props.clock.timeZone;
-  let ausTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
+  
+  let ausTime = new Date().toLocaleString("en-US", { timeZone: gmt });
   console.log(ausTime);
   // console.log(date);
   
   function refreshClock() {
-   let timeZone = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
+   let timeZone = new Date().toLocaleString("en-US", { timeZone: gmt });
 
    let newDate = new Date(timeZone);
    
